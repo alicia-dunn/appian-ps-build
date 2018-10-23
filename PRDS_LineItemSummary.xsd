@@ -1,0 +1,146 @@
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://ideas.disa.mil/types/" targetNamespace="http://ideas.disa.mil/types/">
+  <xsd:complexType name="PRDS_LineItemSummary">
+    <xsd:annotation>
+      <xsd:appinfo source="appian.jpa">
+				@Table(name="PR_LINE_ITEM_SUMMARY")
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="id" nillable="true" type="xsd:int">
+        <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">@Id @Column(name="PR_LINE_ITEM_DETAIL_ID")</xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="purchaseRequestId" nillable="true" type="xsd:int">
+        <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">@Column(name="PURCHASE_REQUEST_ID")</xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="familyId" nillable="true" type="xsd:int">
+        <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">@Column(name="FAMILY_ID")</xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="parentId" nillable="true" type="xsd:int">
+        <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">@Column(name="PARENT_ID")</xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="lineItem" nillable="true" type="xsd:string">
+        <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">@Column(name="LINE_ITEM")</xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="description" nillable="true" type="xsd:string">
+        <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">@Column(name="DESCRIPTION")</xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="type" nillable="true" type="xsd:string">
+        <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">@Column(name="TYPE")</xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="productOrService" nillable="true" type="xsd:string">
+        <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">@Column(name="PRODUCT_OR_SERVICE")</xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="unitOfMeasure" nillable="true" type="xsd:string">
+        <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">@Column(name="UNIT_OF_MEASURE")</xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="quantity" nillable="true" type="xsd:decimal">
+        <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">@Column(name="QUANTITY")</xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="unitPrice" nillable="true" type="xsd:decimal">
+        <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">@Column(name="UNIT_PRICE")</xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="pricingArrangement" nillable="true" type="xsd:string">
+        <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">@Column(name="PRICING_ARRANGEMENT")</xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="amount" nillable="true" type="xsd:decimal">
+        <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">@Column(name="AMOUNT")</xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="costConstraint" nillable="true" type="xsd:string">
+        <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">@Column(name="COST_CONSTRAINT")</xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="committedAmount" nillable="true" type="xsd:decimal">
+        <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">@Column(name="COMMITTED_AMOUNT")</xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="cin" nillable="true" type="xsd:string">
+        <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">@Column(name="COMMITMENT_ID_NUMBER")</xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="optionLineItem" nillable="true" type="xsd:string">
+        <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">@Column(name="OPTION_LINE_ITEM")</xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="severableIndicator" nillable="true" type="xsd:string">
+        <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">@Column(name="SEVERABLE_INDICATOR")</xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="itemUUIDRequired" nillable="true" type="xsd:string">
+        <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">@Column(name="ITEM_UUID_REQUIRED")</xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="popStart" nillable="true" type="xsd:date">
+        <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">@Column(name="POP_START")</xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="popEnd" nillable="true" type="xsd:date">
+        <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">@Column(name="POP_END")</xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="fobPointType" nillable="true" type="xsd:string">
+        <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">@Column(name="FOB_POINT_TYPE")</xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="paymentMethod" nillable="true" type="xsd:string">
+        <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">@Column(name="PAYMENT_METHOD")</xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="unitedNationsCode" nillable="true" type="xsd:string">
+        <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">@Column(name="UNITED_NATIONS_CODE")</xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="referenceDescription" nillable="true" type="xsd:string">
+        <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">@Column(name="REFERENCE_DESCRIPTION")</xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="referenceValue" nillable="true" type="xsd:string">
+        <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">@Column(name="REFERENCE_VALUE")</xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="optionExerciseDate" nillable="true" type="xsd:date">
+        <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">@Column(name="OPTION_EXERCISE_DATE")</xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>
